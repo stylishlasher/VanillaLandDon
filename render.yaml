@@ -1,6 +1,21 @@
 services:
   - type: web
-    name: tg-shop-bot
-    runtime: python
+    name: vanillaland-bot
+    env: python
+    plan: free
+    region: frankfurt
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: PORT
+        value: 8080
+      - key: SERVER_IP
+        value: "0.0.0.0"
+      - key: RCON_PORT
+        value: "25575"
+      - key: RCON_PASSWORD
+        sync: false
