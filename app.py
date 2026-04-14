@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
-API_TOKEN = '8654588828:AAEPpW0GHrS5HaPc_U-bvm2MevHxzBE5lbM'
+API_TOKEN = os.getenv('BOT_TOKEN')
 ADMIN_ID = 123456789  # ЗАМЕНИ на свой ID (узнай в @userinfobot), чтобы получать уведомления
 
 bot = Bot(token=API_TOKEN)
